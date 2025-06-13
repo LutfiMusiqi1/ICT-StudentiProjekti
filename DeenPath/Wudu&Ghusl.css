@@ -1,0 +1,64 @@
+@import url('style.css');
+
+/* Use .prayer-steps for step-by-step guides */
+/* Use .video-btn for video links */
+
+.video-thumbnail-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #273127;
+  border: 2px solid #7a9c4b;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  margin: 1.2rem 0 1.5rem 0;
+  transition: background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.video-thumbnail-btn:hover {
+  background: #3B4F1B;
+  border-color: #FFA500;
+}
+.video-thumb-img {
+  width: 80px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.play-icon {
+  font-size: 2rem;
+  color: #FFA500;
+  margin-left: -2.2rem;
+  z-index: 1;
+  pointer-events: none;
+}
+.video-thumb-label {
+  font-family: 'Poppins', sans-serif;
+  color: #F3E9D2;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  background: #3B4F1B;
+  color: #F3E9D2;
+  border: none;
+  border-radius: 50%;
+  width: 2.7rem;
+  height: 2.7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: none;
+  z-index: 1000;
+  transition: background 0.2s, color 0.2s, opacity 0.3s;
+}
+#scrollToTopBtn:hover {
+  background: #FFA500;
+  color: #fff;
+}

@@ -1,0 +1,100 @@
+@import url('style.css');
+
+/* Prayer Cards Grid */
+.prayer-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.prayer-card {
+  background: #3B4F1B;
+  border-left: 5px solid #7a9c4b;
+  border-radius: 10px;
+  color: #F3E9D2;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  font-family: 'Poppins', sans-serif;
+}
+.prayer-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #b6d47a;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.prayer-card p {
+  margin: 0.2rem 0;
+  font-size: 0.98rem;
+}
+/* Responsive Prayer Cards */
+@media (max-width: 900px) {
+  .prayer-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .prayer-cards-container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
+/* Step-by-step guide */
+.prayer-steps {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+.prayer-steps li {
+  position: relative;
+  background: #273127;
+  border-left: 5px solid #7a9c4b;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 1rem 3.2rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.prayer-steps li:before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  background: #b6d47a;
+  color: #232a23;
+  border-radius: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.08rem;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  background: #3B4F1B;
+  color: #F3E9D2;
+  border: none;
+  border-radius: 50%;
+  width: 2.7rem;
+  height: 2.7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: none;
+  z-index: 1000;
+  transition: background 0.2s, color 0.2s, opacity 0.3s;
+}
+#scrollToTopBtn:hover {
+  background: #FFA500;
+  color: #fff;
+}

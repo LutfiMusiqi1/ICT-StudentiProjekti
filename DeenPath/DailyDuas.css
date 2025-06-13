@@ -1,0 +1,106 @@
+@import url('style.css');
+
+/* Dua Cards Grid */
+.dua-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+  .dua-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Dua Card Styling */
+.dua-card {
+  background: #273127;
+  border-left: 5px solid #7a9c4b;
+  border-radius: 10px;
+  color: #F3E9D2;
+  padding: 1.2rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dua-arabic {
+  font-family: 'Amiri', serif, 'Open Sans', sans-serif;
+  font-size: 1.45rem;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  direction: rtl;
+  color: #fffbe7;
+}
+.dua-translit {
+  font-size: 1rem;
+  color: #b6d47a;
+  margin-bottom: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+.dua-meaning {
+  font-size: 1.08rem;
+  margin-bottom: 0.3rem;
+  color: #F3E9D2;
+}
+.dua-note {
+  font-size: 0.98rem;
+  color: #FFA500;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* Add to your DailyDuas.css or main CSS file */
+.copy-dua-btn {
+  background: #3B4F1B;
+  color: #F3E9D2;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  vertical-align: middle;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.copy-dua-btn:hover, .copy-dua-btn:focus {
+  background: #FFA500;
+  color: #fff;
+  outline: none;
+}
+.copy-dua-btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  background: #3B4F1B;
+  color: #F3E9D2;
+  border: none;
+  border-radius: 50%;
+  width: 2.7rem;
+  height: 2.7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: none;
+  z-index: 1000;
+  transition: background 0.2s, color 0.2s, opacity 0.3s;
+}
+#scrollToTopBtn:hover {
+  background: #FFA500;
+  color: #fff;
+}
